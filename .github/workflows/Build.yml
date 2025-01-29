@@ -13,9 +13,12 @@ jobs:
           java-version: "11"
           distribution: "temurin"
           cache: gradle
+      - name: Set permission 
+        run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew assembleDebug
-      - uses: actions/upload-artifact@v2
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
         with:
           name: app-debug.apk
           path: app/build/outputs/apk/*/*.apk
