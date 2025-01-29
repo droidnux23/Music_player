@@ -18,7 +18,13 @@ jobs:
           
     - name: Set permission 
       run: chmod +x gradlew
-      
+
+  #  ./gradlew
+
+    - name: Debug Gradle Build
+      run: ./gradlew app:kspDebugKotlin --stacktrace --info
+  
+  ###
     - name: Build with Gradle
       run: ./gradlew assembleDebug
       
