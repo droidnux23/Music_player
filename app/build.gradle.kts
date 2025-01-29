@@ -10,9 +10,9 @@ plugins {
 }
 
 android {
-    val appId = "${project.group}.android"
+    val appId = "app.flowtune.android"
 
-    namespace = appId
+    namespace = app.flowtune.android
     compileSdk = 35
 
     defaultConfig {
